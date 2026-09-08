@@ -1,0 +1,10 @@
+A= {1,2,3,4,5,6,7}
+B={5,6,7}
+
+# is subset
+print("A issubset B :", ( A.issubset(B)) )
+print("B issubset A :", ( B.issubset(A)) )
+
+# issuperset
+print("A issuperset B :", ( A.issuperset(B)) )
+print("B issuperset A :", ( B.issuperset(A)) )
