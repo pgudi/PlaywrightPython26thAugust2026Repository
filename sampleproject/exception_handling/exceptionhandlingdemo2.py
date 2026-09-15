@@ -15,8 +15,14 @@ def division(x,y):
     try:
         result=(x / y)
         print("Division Result :",result)
+    except IndexError as e:
+            print("Zero Division Error has Occured :",e)
     except ZeroDivisionError as e:
-        print("Zero Division Error has Occured :",e)
+            print("Zero Division Error has Occured :",e)
+    except Exception as e:
+        print("Zero Division Error Handled by Exception class :",e)
+    finally:
+        print("This statement execute Always !!!!")
 
 def verify_even_number(num):
     if(num % 2 == 0):
