@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function simplealert(){
+            alert("It is a Simple Alert Message")
+            document.getElementById("result").innerHTML="Result: Clicked on OK Button"
+        }
+        function confirmAlert(){
+            let status1=confirm("Do you want to Delete the Record?")
+            if(status1==true){
+                document.getElementById("result").innerHTML="Result: Clicked on OK Button"
+            }else{
+                document.getElementById("result").innerHTML="Result: Clicked on Cancel Button"
+            }
+        }
+
+        function promptAlert(){
+            let data=prompt("Enter the Automation Tool Name:")
+            if(data==null){
+                document.getElementById("result").innerHTML="Result: Clicked on Cancel Button"
+            }else if(data==""){
+                document.getElementById("result").innerHTML="Result: Without Entering Data, Clicked on OK Button"
+            }else{
+                document.getElementById("result").innerHTML="Result: "+data
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h2>alert(), confirm(), prompt() dialogs</h2>
+
+    <input type="button" value="Execute Alert" onclick="simplealert()"> <br><br><br>
+    <input type="button" value="Execute Confirm Alert" onclick="confirmAlert()"> <br><br><br>
+    <input type="button" value="Execute Prompt Alert" onclick="promptAlert()"> <br><br><br>
+
+    <h3>Output</h3>
+    <p id="result">Click on any Button to View Result!</p>
+</body>
+</html>
